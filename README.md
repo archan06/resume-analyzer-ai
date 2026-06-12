@@ -93,18 +93,6 @@ resume-analyzer/
 └── package.json
 ```
 
----
-
-## Screenshots
-
-> _Add screenshots here after running the app locally._
-
-| Input | Results |
-|-------|---------|
-| ![Input screen](screenshots/input.png) | ![Results screen](screenshots/results.png) |
-
----
-
 ## Environment Variables
 
 | Variable | Description |
