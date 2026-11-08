@@ -21,7 +21,7 @@ const limiter = rateLimit({
   max: 10,
   standardHeaders: true,
   legacyHeaders: false,
-  message: { error: 'Too many requests — please try again in an hour.' }
+  message: { error: 'Too many requests. Please try again in an hour.' }
 });
 app.use('/api/', limiter);
 
@@ -140,7 +140,7 @@ Score dimension definitions:
 // ── Multer + general error handler ───────────────────────────────────────────
 app.use((err, _req, res, _next) => {
   if (err.code === 'LIMIT_FILE_SIZE') {
-    return res.status(400).json({ error: 'File too large — maximum is 5 MB.' });
+    return res.status(400).json({ error: 'That file is too large. The limit is 5 MB.' });
   }
   if (err.message === 'Only PDF files are accepted.') {
     return res.status(400).json({ error: err.message });
